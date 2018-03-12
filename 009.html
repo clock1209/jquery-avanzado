@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+<h1>Ejercicio 9</h1>
+
+<ul id="desayuno">
+    <li class="pozole">no</li>
+    <li class="tostadas">no</li>
+    <li class="quesadillas">no</li>
+</ul>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script>
+    var $desayuno = $('#desayuno');
+
+    //Es mejor obtener el elemento al principio y a partir de la variable del elemento
+    //encontrar los elementos necesarios, para evitar que el dom busque nuevamente.
+    $desayuno.find('.pozole').text('si').end()
+             .find('.tostadas').text('si').end()
+             .find('.quesadillas').text('si').end()
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+<h1>Ejercicio 6</h1>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script>
+    //definir si un elemento existe
+    // if( $('h1').length > 0){
+    //     console.log('El elemento existe');
+    // } else {
+    //     console.log('El elemento no existe');
+    // }
+
+    $.fn.existe = function() { return this.length > 0 }
+
+    console.log( $('li').existe() ? 'Existe' : 'No existe' );
+</script>
+</html>

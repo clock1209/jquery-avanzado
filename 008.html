@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+<h1>Ejercicio 8</h1>
+<ul id="links">
+    <li><a href="002.html">Ir al 001.html</a></li>
+    <li><a href="006.html">Ir al 006.html</a></li>
+    <li><a href="http://google.com">Ir a Google</a></li>
+    <li><a href="http://laraveles.com">Ir a Laraveles</a></li>
+</ul>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script>
+    //Agrega un icono a las rutas de la lista que sean externas a la aplicación
+    $('#links a').each( function(){
+        if(this.hostname != location.hostname ){
+            $(this).append(' <i class="fas fa-external-link-square-alt"></i>')
+                .attr('target', '_blank');
+        }
+    });
+</script>
+</html>

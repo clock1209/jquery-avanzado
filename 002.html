@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+<h1>Ejercicio 2</h1>
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script>
+    var route = {
+        _routes: {},
+        add : function( url, action ) {
+            this._routes[url] = action;
+        },
+        run : function() {
+            $.each(this._routes, function( patron ) {
+                if( location.href.match( patron ) ){
+                    this();
+                }
+            });
+        }
+    };
+
+    route.add( '.*.html', function() {
+        console.log('Este código, sólo funciona en cualquier página html');
+    });
+
+    route.run();
+</script>
+</html>

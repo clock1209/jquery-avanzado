@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 4</title>
+    <style>
+        .elem{
+            height: 50px;
+            width: 50px;
+            background: purple;
+        }
+    </style>
+</head>
+<body>
+<h1>Ejercicio 4</h1>
+<div class="elem">perro</div>
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script>
+    var $elem = $('.elem');
+
+    //es un div?
+    $elem.is('div') && console.log('Es un div');
+
+    //tiene la clae .elem?
+    $elem.is('.elem') && console.log('Tiene la clase .elem');
+
+    //Es visible?
+    $elem.is(':not(:visible)') && console.log('El elemento está invisible');
+
+    $elem.animate({ 'font-size':34 }, 500);
+
+    //es animado?
+    $elem.is(':animated') && console.log('Esta animado');
+</script>
+</html>
