@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+<h1>Ejercicio 12</h1>
+
+
+</body>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+</script>
+<script>
+    var url = 'https://www.google.com.mx/search?ei=Y0SnWprkINiijwPwjYBA&q=laraveles&oq=laraveles&gs_l=psy-ab.3.0.35i39k1j0i10i203k1j0i203k1l4j0i30k1l4.6564.8014.0.9954.9.9.0.0.0.0.263.1085.0j4j2.6.0....0...1c.1.64.psy-ab..3.6.1082...0j46j0i67k1j0i46k1j0i10k1.0.SXs-7is5YYc#comentarios';
+    var $a = $('<a>', { href:url});
+
+    console.log( 'Hostname:', $a.prop('hostname') );
+    console.log( 'Path:', $a.prop('pathname') );
+    console.log( 'Query:', $a.prop('search') );
+    console.log( 'Protocolo:', $a.prop('protocol') );
+    console.log( 'Hash:', $a.prop('hash') );
+
+    console.log( $a.prop('search').split('&') );
+</script>
+</html>
